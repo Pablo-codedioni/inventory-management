@@ -11,6 +11,7 @@ import {
     User,
   } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 interface SidebarLinkProps {
@@ -77,7 +78,13 @@ const SideBar = () => {
               isSidebarCollapsed ? "px-5" : "px-8"
             }`}
           >
-            <p>logo</p>
+             <Image
+          src="https://s3-inventorymanagament.s3.us-east-2.amazonaws.com/logo.png"
+          alt="edstock-logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
             <h1
               className={`${
                 isSidebarCollapsed ? "hidden" : "block"
